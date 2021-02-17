@@ -214,7 +214,7 @@ def main(file_name):
     print()
 
     # Transform training docs into tf-idf docs
-    # And save CountVector and TfidTransformer used to transform docs
+    # And save CountVectorizer and TfidTransformer used to transform docs
     train_docs_tfidf, count_vect, tfidf_transformer = docs_to_tfidf(train_docs)
 
     # Create a models dictionary containing all models (Naive Bayes, Base DT, Best DT)
@@ -227,7 +227,7 @@ def main(file_name):
     print()
 
     # Prepare evaluation set to be used in models
-    # Transform evaluation set to tfidf feature vector using the CountVector and TfidfTransformer from training set
+    # Transform evaluation set to tfidf feature vector using the CountVectorizer and TfidfTransformer from training set
     eval_counts = count_vect.transform(eval_docs)
     eval_tfidf = tfidf_transformer.transform(eval_counts)
 
