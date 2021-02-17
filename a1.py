@@ -1,13 +1,20 @@
+# HELPERS
 import os
 import sys
 
+# NUMPY
 import numpy as np
+
+# TO PLOT DISTRIBUTIONS
 import matplotlib.pyplot as plt
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+# ML HELPERS
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+
+# ML MODELS
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
-from sklearn import metrics
 
 # ML METRICS
 from sklearn.metrics import confusion_matrix
@@ -159,7 +166,7 @@ def evaluate_and_save(model_name, model, eval_docs, eval_labels, classes, index_
         f.write('========================\n')
         f.write('Confusion matrix (row is expected, column is predicted):\n')
         np.set_printoptions(threshold=np.inf) # Prevent numpy from truncating if numpy matrix is too long
-        f.write(str(metrics.confusion_matrix(eval_labels, prediction)))
+        f.write(str(confusion_matrix(eval_labels, prediction)))
         f.write('\n\n')
 
         # Write metrics
