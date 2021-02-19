@@ -10,7 +10,7 @@ If you are using Anaconda, run instead (from this directory, with the appropriat
 ```conda install --file requirements.txt```
 
 # Running the project
-To run the project, start a Jupyter Notebook instance (`jupyter notebook` in a terminal) and open the Notebook in this project.
+To run the project, start a Jupyter Notebook instance (run `jupyter notebook` in a terminal from this directory) and open the Notebook in this project.
 
 From there, `Cell > Run All` will run all the cells. After a succesful execution of the project, three files will be created, each corresponding to a model (Naive Bayes, Base Decision Tree, Best Decision Tree), containing the results from evaluating a model on a portion of the data set. By default, the data set is the `all_sentiment_shuffled.txt` file contained in the same directory, with 80% of the data set used to train the models, and 20% of the data set used to evaluate the models.
 
