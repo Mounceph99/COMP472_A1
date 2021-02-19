@@ -18,6 +18,9 @@ After a succesful execution of the project, three files will be created, each co
 
 # Team Members
 Luc Nguyen (40097582)
+
 Chelsea Guan (40097861)
+
 Joseph Loiselle (40095345)
+
 Mounceph Morssaoui (40097557)
